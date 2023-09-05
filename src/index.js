@@ -46,6 +46,5 @@ function requestInfo(city, key) {
 const btnSearch = document.querySelector(".btnSearch");
 btnSearch.addEventListener("click", () => {
   const city = document.querySelector("#searchCity");
-  console.log(process.env.API_KEY);
   requestInfo(city.value, apiKey);
 });
