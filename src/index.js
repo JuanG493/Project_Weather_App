@@ -1,5 +1,5 @@
 import "./style.css";
-
+const apiKey = process.env.WATHER_KEY;
 
 function mkingElmnt(data) {
   let father = document.querySelector("#container");
@@ -47,5 +47,5 @@ const btnSearch = document.querySelector(".btnSearch");
 btnSearch.addEventListener("click", () => {
   const city = document.querySelector("#searchCity");
   console.log(process.env.API_KEY);
-  requestInfo(city.value, process.env.API_KEY);
+  requestInfo(city.value, apiKey);
 });
