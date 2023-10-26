@@ -1,5 +1,5 @@
 import "./style.css";
-const apiKey = process.env.WATHER_KEY;
+// const apiKey = process.env.WATHER_KEY;
 
 function mkingElmnt(data) {
   let father = document.querySelector("#container");
@@ -29,8 +29,8 @@ function mkingElmnt(data) {
 }
 
 
-function requestInfo(city, key) {
-  let url = `http://api.weatherapi.com/v1/current.json?key=${key}=${city}&aqi=no`;
+function requestInfo(city) {
+  let url = `http://api.weatherapi.com/v1/current.json?key=71d53f52951d418fa6c151801230509&q=${city}&aqi=no`;
   getData(url);
   async function getData(direction) {
     try {
@@ -46,5 +46,5 @@ function requestInfo(city, key) {
 const btnSearch = document.querySelector(".btnSearch");
 btnSearch.addEventListener("click", () => {
   const city = document.querySelector("#searchCity");
-  requestInfo(city.value, apiKey);
+  requestInfo(city.value);
 });
